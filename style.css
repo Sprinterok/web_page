@@ -14,12 +14,21 @@ body,ul{
     padding: 0;
 }
 
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
 .box{
     max-width: 1000px;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 header a{
     color: white;
@@ -36,9 +45,7 @@ header a:hover{
 
 }
 
-header li{
-    list-style: none;
-}
+
 
 header ul{
     display: flex;
@@ -49,13 +56,109 @@ header ul{
 #logo{
     display: block;
     max-width: 100px;
+}
 
+#sidebare{
+    width: 23%;
+    
+}
+
+#content{
+    width: 75%;
+}
+
+#main{
+    align-items: flex-start;
+}
+
+#sidebare , #content{
+    margin: 15px 0;
+    box-shadow: 0 0 11px 2px #313d8282;
+    padding: 15px;
+}
+
+#sidebare ul li a{
+    display: block;
+    padding: 10px 0px;
+    color: rgb(6, 14, 82);
+    border-bottom: 1px dashed black;
+}
+
+#sidebare ul li a:hover{
+    color: #54b848;
+    border-color: #54b848;
+}
+
+
+#sidebare ul li:last-child a{
+    border: none;
+}
+
+#content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product{
+    width: 23%;
+    box-shadow: 0 0 9px 0px black;
+    margin-bottom: 15px;
+    padding: 15px;
 }
 
 
 
+.product:hover{
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    box-shadow: #5ca853;
+}
+.product h2{
+    margin: 0 0 15px 0;
+}
+
+.product img{
+    max-width: 100%;
+}
+
+.p-bottom{
+    display: flex;
+    justify-content: space-between;
+
+}
+.p-bottom button{
+    background: #54b848;
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+}
+.p-bottom button:hover{
+    background: #103d0b;
+}
+
+.p-bottom span{
+    font-weight: bold;
+    font-size: 20px;
+}
 
 
+
+@media(max-width:960px){
+    .product{
+        width: 32%;
+    }
+    #sidebar{
+        width: 33%;
+    }
+    #content{
+        width: 34%;
+    }
+}
 
 @media(max-width:725px){
     header .box{
@@ -66,6 +169,27 @@ header ul{
         width: 100%;
         margin-top: 25px;
         flex-direction: column;
+        text-align: center;
+    }
+    .product{
+        width: 64%;
+    }
+    #sidebar{
+        width: 64%;
+    }
+    #content{
+        width: 65%;
+    }
+}
+
+@media(max-width:570px){
+    #sidebar{
+        width: 100%
+    }
+    #content{
+        width: 100%;
+    }
+    #sidebar, #content{
         text-align: center;
     }
 }
